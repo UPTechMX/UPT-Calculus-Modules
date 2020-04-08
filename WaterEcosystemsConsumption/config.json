@@ -1,0 +1,30 @@
+{
+    "module": "WaterEcosystemsConsumption",
+    "name": "Water Ecosystems Consumption",
+    "version": 0.1,
+    "date": "04-09-2019",
+    "developer": "CAPSUS",
+    "contact": "sistemas@capsus.mx",
+    "description": "Amount of water related ecosystems land that is predicted to become urban human settlements, between the base year and the horizon year. ",
+    "category": "Goal 6",
+    "dependencies": ["GeneralCalculus"],
+    "data_dependencies": [{
+        "tables": [
+            "footprint",
+            "risk",
+            "mmu",
+            "mmu_info"
+        ],
+        "data": [
+            "greenland polygons",
+            "mmu location",
+            "mmu_info area"
+        ]
+    }],
+    "data_generated": [{
+        "table": "results",
+        "field": "watereco_consumption",
+        "goal": "6.6 By 2020, protect and restore water-related ecosystems, including mountains, forests, wetlands, rivers, aquifers and lakes"
+    }],
+    "submodules": []
+}

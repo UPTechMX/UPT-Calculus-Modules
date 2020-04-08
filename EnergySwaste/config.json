@@ -1,0 +1,63 @@
+{
+    "module": "EnergySwaste",
+    "name": "Energy associated to solid waste management",
+    "version": 0.1,
+    "date": "04-09-2019",
+    "developer": "CAPSUS",
+    "contact": "sistemas@capsus.mx",
+    "description": "Average per capita energy consumed annually by the solid waste management system of the city, including energy for collection and transportation, as well as the energy consumed in the landfill and transfer stations.",
+    "category": "Goal 7. Ensure access to affordable, reliable, sustainable and modern energy for all",
+    "dependencies": [
+        "GeneralCalculus",
+        "RoadsKm2"
+    ],
+    "data_dependencies": [{
+        "tables": [
+            "assumptions"
+        ],
+        "data": {
+            "assumptions": [
+                "land_ef",
+                "truck3_ef",
+                "energy_tonTS",
+                "truck1_ef",
+                "diesel_den",
+                "diesel_cv",
+                "truck1_cap",
+                "dist_land",
+                "dist_ts",
+                "truck2_ef",
+                "truck2_cap",
+                "dist_tsland",
+                "prim_road_fact",
+                "sec_road_fact",
+                "ter_road_fact",
+                "collections",
+                "comp_ef",
+                "waste_density",
+                "waste_per"
+            ],
+            "results": [
+                "footprint_km2",
+                "pop_total",
+                "ter_road_km2",
+                "prim_road_km2",
+                "sec_road_km2"
+            ]
+        }
+    }],
+    "data_generated": [{
+        "table": "results",
+        "field": "energy_swaste",
+        "goal": null
+    }, {
+        "table": "results",
+        "field": "collection_energy",
+        "goal": null
+    }, {
+        "table": "results",
+        "field": "transport_energy",
+        "goal": null
+    }],
+    "submodules": []
+}

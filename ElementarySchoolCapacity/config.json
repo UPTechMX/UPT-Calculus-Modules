@@ -1,0 +1,38 @@
+{
+    "module": "ElementarySchoolCapacity",
+    "name": "Elementary School Capacity",
+    "version": 0.1,
+    "date": "04-09-2019",
+    "developer": "CAPSUS",
+    "contact": "sistemas@capsus.mx",
+    "description": "Maximum number of students that can be served by each elementary school",
+    "category": "Goal 4. Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all",
+    "dependencies": [
+        "GeneralCalculus"
+    ],
+    "data_dependencies": [{
+        "tables": [
+            "amenities",
+            "amenities_info",
+            "assumptions"
+        ],
+        "data": {
+            "amenities": [
+                "fclass"
+            ],
+            "amenities_info": [
+                "shift",
+                "gross_area"
+            ],
+            "assumptions": [
+                "elestudent_area"
+            ]
+        }
+    }],
+    "data_generated": [{
+        "table": "results",
+        "field": "elementary_capacity",
+        "goal": "Goal 4. Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all"
+    }],
+    "submodules": []
+}

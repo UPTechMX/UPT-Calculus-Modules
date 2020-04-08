@@ -1,0 +1,75 @@
+{
+    "module": "GeneralCalculus",
+    "name": "General Processing",
+    "version": 0.1,
+    "date": "23-08-2019",
+    "developer": "CAPSUS",
+    "contact": "sistemas@capsus.mx",
+    "description": "This module performs the calculation or updating of the following values: the area of the footprint polygons, the total population of the scenario,the area of the mmu, the number of husing units in the scenario, the number of vacant housing units in the scenario, the area increment inside of the vacant base footprint, the vacant housing units rate, the population settled inside of the base footprint, the population outside of the base footprint, the population area density,pop_density_avge",
+    "category": "",
+    "dependencies": [],
+    "data_dependencies": [{
+        "tables": [
+            "assumptions",
+            "mmu",
+            "mmu_info",
+            "footprint"
+        ],
+        "data": {
+            "assumptions": [
+                "pop_den_r",
+                "area_den_r",
+                "footprint polygons",
+                "population for each mmu",
+                "area of each mmu",
+                "area density radius",
+                "population density radius",
+                "prioritize_tod",
+                "min_vhu_rate",
+                "min_vhu_rate"
+            ],
+            "mmu": ["location"],
+            "mmu_info": ["population", "area", "hu", "vhu"],
+            "footprint": ["footprint_base", "study_area", "footprint_horizon", "location"]
+        }
+
+    }],
+    "data_generated": [{
+        "table": "mmu_info",
+        "field": "pop_density_avge",
+        "goal": null
+    }, {
+        "table": "mmu_info",
+        "field": "area_density_avge",
+        "goal": null
+    }, {
+        "table": "results",
+        "field": "footprint_km2",
+        "goal": null
+    }, {
+        "table": "results",
+        "field": "infill_area_km2",
+        "goal": null
+    }, {
+        "table": "results",
+        "field": "pop_infill",
+        "goal": null
+    }, {
+        "table": "results",
+        "field": "vhu_tot",
+        "goal": null
+    }, {
+        "table": "results",
+        "field": "hu_tot",
+        "goal": null
+    }, {
+        "table": "results",
+        "field": "vhu_rate",
+        "goal": null
+    }, {
+        "table": "results",
+        "field": "pop_expan",
+        "goal": null
+    }],
+    "submodules": []
+}

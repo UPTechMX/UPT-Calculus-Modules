@@ -1,0 +1,30 @@
+{
+    "module": "SustainableAgriculturalLand",
+    "name": "Sustainable Agricultural Land",
+    "version": 0.1,
+    "date": "02-01-2020",
+    "developer": "CAPSUS",
+    "contact": "sistemas@capsus.mx",
+    "description": "Percentage of agricultural area under productive and sustainable agriculture expressed as km2 of sustainable agriculture area per km2 of agricultural area",
+    "category": "Goal 2. End hunger, achieve food security and improved nutrition and promote sustainable agriculture",
+    "dependencies": ["GeneralCalculus"],
+    "data_dependencies": [{
+        "tables": [
+            "footprint"
+        ],
+        "data": [
+            "agricutural polygons",
+            "sustainable agricutural polygons"
+        ]
+    }],
+    "data_generated": [{
+        "table": "results",
+        "field": "agric_sus",
+        "goal": "Goal 2. End hunger, achieve food security and improved nutrition and promote sustainable agriculture"
+    }, {
+        "table": "results",
+        "field": "agric_sustainable_pct",
+        "goal": "Goal 2. End hunger, achieve food security and improved nutrition and promote sustainable agriculture"
+    }],
+    "submodules": []
+}

@@ -1,0 +1,30 @@
+{
+    "module": "HighSchoolCapacity",
+    "name": "High School Capacity",
+    "version": 0.1,
+    "date": "04-09-2019",
+    "developer": "CAPSUS",
+    "contact": "sistemas@capsus.mx",
+    "description": "Maximum number of students that can be served by each high school",
+    "category": "Goal 4. Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all",
+    "dependencies": ["GeneralCalculus"],
+    "data_dependencies": [{
+        "tables": [
+            "assumptions",
+            "amenities",
+            "amenities_info"
+        ],
+        "data": [
+            "mmu.location",
+            "mmu_info.population",
+            "amenity.location",
+            "amenity.fclass"
+        ]
+    }],
+    "data_generated": [{
+        "table": "results",
+        "field": "highschool_capacity",
+        "goal": "Goal 4. Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all"
+    }],
+    "submodules": []
+}

@@ -1,0 +1,77 @@
+{
+    "module": "EnergyTransport",
+    "name": "Energy associated to transportation",
+    "version": 0.1,
+    "date": "04-09-2019",
+    "developer": "CAPSUS",
+    "contact": "sistemas@capsus.mx",
+    "description": "Total average energy consumed per person during a year for commuting within the city, by public transportation or private vehicle.",
+    "category": "Goal 7. Ensure access to affordable, reliable, sustainable and modern energy for all",
+    "dependencies": [
+        "BuffersJobs",
+        "GeneralCalculus",
+        "MMUTransitDistance"
+    ],
+    "data_dependencies": [{
+        "tables": [
+            "assumptions",
+            "mmu",
+            "mmu_info"
+        ],
+        "data": {
+            "assumptions": [
+                "hu_size",
+                "JDMXN_exrate",
+                "gasoline_cv",
+                "diesel_cost",
+                "diesel_den",
+                "diesel_cv",
+                "gasoline_cost",
+                "gasoline_den",
+                "gasoline_transp_frac",
+                "diesel_transp_frac",
+                "avge_inflation",
+                "socioeco_level"
+            ],
+            "mmu_info": [
+                "transit_distance",
+                "job_density_avge",
+                "pop_density_avge",
+                "avge_area",
+                "population",
+                "energy_gasoline",
+                "energy_diesel",
+                "energy_transport"
+            ],
+            "results": [
+                "pop_total"
+            ]
+        }
+    }],
+    "data_generated": [{
+        "table": "mmu_info",
+        "field": "energy_transport",
+        "goal": null
+    }, {
+        "table": "mmu_info",
+        "field": "energy_gasoline",
+        "goal": null
+    }, {
+        "table": "mmu_info",
+        "field": "energy_diesel",
+        "goal": null
+    }, {
+        "table": "mmu_info",
+        "field": "energy_transport",
+        "goal": null
+    }, {
+        "table": "mmu_info",
+        "field": "energy_gasoline",
+        "goal": null
+    }, {
+        "table": "mmu_info",
+        "field": "energy_diesel",
+        "goal": null
+    }],
+    "submodules": []
+}

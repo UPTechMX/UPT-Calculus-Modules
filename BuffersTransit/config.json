@@ -1,0 +1,32 @@
+{
+    "module": "BuffersTransit",
+    "name": "Buffer zone",
+    "version": 0.1,
+    "date": "04-09-2019",
+    "developer": "CAPSUS",
+    "contact": "sistemas@capsus.mx",
+    "description": "This module performs the calculation or updating of the following values: amenities.buffer,transit.buffer, roads.buffer,risk.buffer ",
+    "category": "",
+    "dependencies": [],
+    "data_dependencies": [{
+        "tables": [
+            "transit",
+            "assumptions"
+        ],
+        "data": {
+            "transit": [
+                "location",
+                "fclass"
+            ],
+            "assumptions": [
+                "transit_class"
+            ]
+        }
+    }],
+    "data_generated": [{
+        "table": "transit",
+        "field": "buffer",
+        "goal": null
+    }],
+    "submodules": []
+}

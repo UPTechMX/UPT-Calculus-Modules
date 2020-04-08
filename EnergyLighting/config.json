@@ -1,0 +1,45 @@
+{
+    "module": "EnergyLighting",
+    "name": "Energy associated to public lighting",
+    "version": 0.1,
+    "date": "04-09-2019",
+    "developer": "CAPSUS",
+    "contact": "sistemas@capsus.mx",
+    "description": "Annual average per capita energy consumption due to public lighting.",
+    "category": "Goal 7. Ensure access to affordable, reliable, sustainable and modern energy for all",
+    "dependencies": [
+        "GeneralCalculus",
+        "RoadsKm2"
+    ],
+    "data_dependencies": [{
+        "tables": [
+            "assumptions"
+        ],
+        "data": {
+            "assumptions": [
+                "interpost",
+                "num_bulb",
+                "num_led",
+                "tot_bulb",
+                "ped_road_km",
+                "volt_led",
+                "volt_bulb",
+                "led_pen",
+                "hours_day"
+            ],
+            "results": [
+                "footprint_km2",
+                "pop_total",
+                "ter_road_km2",
+                "prim_road_km2",
+                "sec_road_km2"
+            ]
+        }
+    }],
+    "data_generated": [{
+        "table": "results",
+        "field": "energy_lighting",
+        "goal": "Goal 7. Ensure access to affordable, reliable, sustainable and modern energy for all"
+    }],
+    "submodules": []
+}

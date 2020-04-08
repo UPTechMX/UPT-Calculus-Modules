@@ -1,0 +1,32 @@
+{
+    "module": "ConnectedElectricity",
+    "name": "Population Connected to the Electricity Network",
+    "version": 0.1,
+    "date": "04-09-2019",
+    "developer": "CAPSUS",
+    "contact": "sistemas@capsus.mx",
+    "description": "Percentage of population that are connected to the national electricity grid",
+    "category": "Goal 1. End poverty in all its forms everywhere",
+    "dependencies": ["GeneralCalculus"],
+    "data_dependencies": [{
+        "tables": [
+            "mmu",
+            "mmu_info"
+        ],
+        "data": {
+            "results": ["pop_total"],
+            "mmu_info": ["con_elec"],
+            "mmu": ["population"]
+        }
+    }],
+    "data_generated": [{
+        "table": "results",
+        "field": "con_elec",
+        "goal": "Goal 1. End poverty in all its forms everywhere"
+    }, {
+        "table": "results",
+        "field": "pop_con_elec",
+        "goal": "Goal 1. End poverty in all its forms everywhere"
+    }],
+    "submodules": []
+}

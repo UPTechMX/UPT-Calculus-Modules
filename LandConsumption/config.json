@@ -1,0 +1,32 @@
+{
+    "module": "LandConsumption",
+    "name": "Land Consumption",
+    "version": 0.1,
+    "date": "23-08-2019",
+    "developer": "CAPSUS",
+    "contact": "sistemas@capsus.mx",
+    "description": "Amount of land predicted to change from natural habitats or agricultural uses into urban human settlements, between the base year and the horizon year.",
+    "category": "Goal 11. Make cities and human settlements inclusive, safe, resilient and sustainable",
+    "dependencies": ["GeneralCalculus"],
+    "data_dependencies": [{
+        "tables": [
+            "footprint",
+            "mmu",
+            "mmu_info"
+        ],
+        "data": [
+            "minimal mapping unit",
+            "footprint polygons",
+            "population for each mmu",
+            "area of each mmu",
+            "area density radius",
+            "population density radius"
+        ]
+    }],
+    "data_generated": [{
+        "table": "results",
+        "field": "land_consumption_km",
+        "goal": "Goal 11. Make cities and human settlements inclusive, safe, resilient and sustainable"
+    }],
+    "submodules": []
+}

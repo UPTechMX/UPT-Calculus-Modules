@@ -1,0 +1,33 @@
+{
+    "module": "TransitProximity",
+    "name": "Transit Proximity",
+    "version": 0.1,
+    "date": "04-09-2019",
+    "developer": "CAPSUS",
+    "contact": "sistemas@capsus.mx",
+    "description": "Percentage of the population that lives within walking distance from a public transport station. ",
+    "category": "Goal 11. Make cities and human settlements inclusive, safe, resilient and sustainable",
+    "dependencies": ["BuffersTransit", "GeneralCalculus"],
+    "data_dependencies": [{
+        "tables": [
+            "mmu",
+            "mmu_info",
+            "transit"
+        ],
+        "data": [
+            "minimal mapping unit location",
+            "minimal mapping unit population",
+            "transit location"
+        ]
+    }],
+    "data_generated": [{
+        "table": "results",
+        "field": "pop_prox_transit",
+        "goal": "Goal 11. Make cities and human settlements inclusive, safe, resilient and sustainable"
+    }, {
+        "table": "results",
+        "field": "transit_proximity",
+        "goal": "Goal 11. Make cities and human settlements inclusive, safe, resilient and sustainable"
+    }],
+    "submodules": []
+}

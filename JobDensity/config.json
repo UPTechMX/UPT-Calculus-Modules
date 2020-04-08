@@ -1,0 +1,31 @@
+{
+    "module": "JobDensity",
+    "name": "Job Proximity",
+    "version": 0.1,
+    "date": "04-09-2019",
+    "developer": "CAPSUS",
+    "contact": "sistemas@capsus.mx",
+    "description": "Percentage of the population that lives within a distance of 1,000 meters from the areas of high job density in the city",
+    "category": "",
+    "dependencies": ["GeneralCalculus"],
+    "data_dependencies": [{
+        "tables": [
+            "assumptions",
+            "jobs",
+            "jobs_info",
+            "mmu"
+        ],
+        "data": [
+            "mmu.location",
+            "mmu_info.population",
+            "amenity.location",
+            "amenity.fclass"
+        ]
+    }],
+    "data_generated": [{
+        "table": "jobs_info",
+        "field": "job_density_avge",
+        "goal": null
+    }],
+    "submodules": []
+}

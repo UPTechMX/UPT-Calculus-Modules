@@ -1,0 +1,26 @@
+{
+    "module": "PopulationDensity",
+    "name": "Population Density",
+    "version": 0.1,
+    "date": "04-09-2019",
+    "developer": "CAPSUS",
+    "contact": "sistemas@capsus.mx",
+    "description": "Number of inhabitants per built-up area, expressed as inhabitants per square kilometer",
+    "category": "",
+    "dependencies": ["GeneralCalculus"],
+    "data_dependencies": [{
+        "tables": [],
+        "data": [
+            "mmu.location",
+            "mmu_info.population",
+            "amenity.location",
+            "amenity.fclass"
+        ]
+    }],
+    "data_generated": [{
+        "table": "results",
+        "field": "pop_density",
+        "goal": null
+    }],
+    "submodules": []
+}

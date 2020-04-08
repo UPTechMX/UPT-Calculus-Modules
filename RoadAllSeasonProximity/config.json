@@ -1,0 +1,33 @@
+{
+    "module": "RoadAllSeasonProximity",
+    "name": "Road All Season Proximity",
+    "version": 0.1,
+    "date": "04-09-2019",
+    "developer": "CAPSUS",
+    "contact": "sistemas@capsus.mx",
+    "description": "Percentage of the  population who live near of an all-season road",
+    "category": "Goal 9. Build resilient infrastructure, promote inclusive and sustainable industrialization and foster innovation",
+    "dependencies": ["BuffersRoads", "GeneralCalculus"],
+    "data_dependencies": [{
+        "tables": [
+            "roads",
+            "mmu",
+            "mmu_info"
+        ],
+        "data": [
+            "risk polygons",
+            "amenity location",
+            "amenity fclass"
+        ]
+    }],
+    "data_generated": [{
+        "table": "results",
+        "field": "allseason_prox",
+        "goal": "Goal 9. Build resilient infrastructure, promote inclusive and sustainable industrialization and foster innovation"
+    }, {
+        "table": "results",
+        "field": "pop_prox_allseason",
+        "goal": "Goal 9. Build resilient infrastructure, promote inclusive and sustainable industrialization and foster innovation"
+    }],
+    "submodules": []
+}

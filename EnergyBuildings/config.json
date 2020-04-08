@@ -1,0 +1,38 @@
+{
+    "module": "EnergyBuildings",
+    "name": "Energy associated to buildings",
+    "version": 0.1,
+    "date": "04-09-2019",
+    "developer": "CAPSUS",
+    "contact": "sistemas@capsus.mx",
+    "description": "Average per capita electricity consumed annually to power homes and dwellings.",
+    "category": "Goal 7. Ensure access to affordable, reliable, sustainable and modern energy for all",
+    "dependencies": [
+        "GeneralCalculus"
+    ],
+    "data_dependencies": [{
+        "tables": [
+            "assumptions"
+        ],
+        "data": {
+            "assumptions": [
+                "ener_baseline",
+                "GBC_pen",
+                "GBC_ener"
+            ],
+            "scenario": [
+                "base_scenario"
+            ],
+            "results": [
+                "hu_tot",
+                "pop_total"
+            ]
+        }
+    }],
+    "data_generated": [{
+        "table": "results",
+        "field": "energy_buildings",
+        "goal": "Goal 7. Ensure access to affordable, reliable, sustainable and modern energy for all"
+    }],
+    "submodules": []
+}

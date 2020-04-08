@@ -1,0 +1,32 @@
+{
+    "module": "PopulationInSlums",
+    "name": "Population in Slums",
+    "version": 0.1,
+    "date": "02-01-2020",
+    "developer": "CAPSUS",
+    "contact": "sistemas@capsus.mx",
+    "description": "Percentage of population that are located in areas considered as slums",
+    "category": "Goal 1. End poverty in all its forms everywhere",
+    "dependencies": ["GeneralCalculus"],
+    "data_dependencies": [{
+        "tables": [
+            "mmu",
+            "mmu_info",
+            "risk"
+        ],
+        "data": [
+            "slum polygons",
+            "mmu location"
+        ]
+    }],
+    "data_generated": [{
+        "table": "results",
+        "field": "pop_slums",
+        "goal": "Goal 1. End poverty in all its forms everywhere"
+    }, {
+        "table": "results",
+        "field": "perc_pop_slums",
+        "goal": "Goal 1. End poverty in all its forms everywhere"
+    }],
+    "submodules": []
+}

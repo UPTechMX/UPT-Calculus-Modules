@@ -1,0 +1,35 @@
+{
+    "module": "HealthInfrastructureInRisk",
+    "name": "Health Infrastructure In Risk",
+    "version": 0.1,
+    "date": "04-09-2019",
+    "developer": "CAPSUS",
+    "contact": "sistemas@capsus.mx",
+    "description": "Total number of health infrastructure located in risk areas ",
+    "category": "Goal 11. Make cities and human settlements inclusive, safe, resilient and sustainable",
+    "dependencies": [
+        "GeneralCalculus"
+    ],
+    "data_dependencies": [{
+        "tables": [
+            "risk",
+            "amenities"
+        ],
+        "data": {
+            "risk": [
+                "risk",
+                "location"
+            ],
+            "amenities": [
+                "location",
+                "health_infrastructure"
+            ]
+        }
+    }],
+    "data_generated": [{
+        "table": "results",
+        "field": "health_risk",
+        "goal": "Goal 11. Make cities and human settlements inclusive, safe, resilient and sustainable"
+    }],
+    "submodules": []
+}

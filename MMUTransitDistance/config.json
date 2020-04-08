@@ -1,0 +1,34 @@
+{
+    "module": "MMUTransitDistance",
+    "name": "MMU Transit Distance",
+    "version": 0.1,
+    "date": "04-09-2019",
+    "developer": "CAPSUS",
+    "contact": "sistemas@capsus.mx",
+    "description": "",
+    "category": "",
+    "dependencies": ["GeneralCalculus"],
+    "data_dependencies": [{
+        "tables": [
+            "mmu",
+            "mmu_info",
+            "transit"
+        ],
+        "data": [
+            "mmu.location",
+            "mmu_info.population",
+            "amenity.location",
+            "amenity.fclass"
+        ]
+    }],
+    "data_generated": [{
+        "table": "mmu_info",
+        "field": "transit_distance",
+        "goal": null
+    }, {
+        "table": "mmu_info",
+        "field": "prox_to_transit_fclass",
+        "goal": null
+    }],
+    "submodules": []
+}

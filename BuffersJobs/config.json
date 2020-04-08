@@ -1,0 +1,41 @@
+{
+    "module": "BuffersJobs",
+    "name": "Buffer zone",
+    "version": 0.1,
+    "date": "04-09-2019",
+    "developer": "CAPSUS",
+    "contact": "sistemas@capsus.mx",
+    "description": "This module performs the calculation or updating of the following values: amenities.buffer,transit.buffer, roads.buffer,risk.buffer ",
+    "category": "",
+    "dependencies": [],
+    "data_dependencies": [{
+        "tables": [
+            "jobs",
+            "assumptions"
+        ],
+        "data": {
+            "jobs": [
+                "location",
+                "jobs"
+            ],
+            "assumptions": [
+                "job_min_dens",
+                "job"
+            ]
+        }
+    }],
+    "data_generated": [{
+        "table": "jobs",
+        "field": "buffer",
+        "goal": null
+    }, {
+        "table": "jobs",
+        "field": "job_density_avge",
+        "goal": null
+    }, {
+        "table": "jobs",
+        "field": "jobs_in1km",
+        "goal": null
+    }],
+    "submodules": []
+}

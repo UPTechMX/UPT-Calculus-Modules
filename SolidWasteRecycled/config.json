@@ -1,0 +1,26 @@
+{
+    "module": "SolidWasteRecycled",
+    "name": "Solid Waste Recycled",
+    "version": 0.1,
+    "date": "02-01-2020",
+    "developer": "CAPSUS",
+    "contact": "sistemas@capsus.mx",
+    "description": "Percentage of the solid waste generated that is sorted or recycled in transfer stations",
+    "category": "Goal 12. Ensure sustainable consumption and production patterns",
+    "dependencies": ["GeneralCalculus", "SolidWasteManagementCoverage"],
+    "data_dependencies": [{
+        "tables": [
+            "assumptions"
+        ],
+        "data": [
+            "slum polygons",
+            "mmu location"
+        ]
+    }],
+    "data_generated": [{
+        "table": "results",
+        "field": "waste_recycled",
+        "goal": "Goal 12. Ensure sustainable consumption and production patterns"
+    }],
+    "submodules": []
+}

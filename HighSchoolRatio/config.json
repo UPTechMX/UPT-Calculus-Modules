@@ -1,0 +1,30 @@
+{
+    "module": "HighSchoolRatio",
+    "name": "High School Ratio",
+    "version": 0.1,
+    "date": "04-09-2019",
+    "developer": "CAPSUS",
+    "contact": "sistemas@capsus.mx",
+    "description": "Percentage of students that can be served in comparison with the population in age of attending high school",
+    "category": "Goal 4. Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all",
+    "dependencies": ["GeneralCalculus", "HighSchoolCapacity"],
+    "data_dependencies": [{
+        "tables": [
+            "assumptions",
+            "mmu",
+            "mmu_info"
+        ],
+        "data": [
+            "mmu.location",
+            "mmu_info.population",
+            "amenity.location",
+            "amenity.fclass"
+        ]
+    }],
+    "data_generated": [{
+        "table": "results",
+        "field": "highmax_perc",
+        "goal": "Goal 4. Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all"
+    }],
+    "submodules": []
+}

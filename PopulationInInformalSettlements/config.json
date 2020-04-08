@@ -1,0 +1,32 @@
+{
+    "module": "PopulationInInformalSettlements",
+    "name": "Population in Informal Settlements",
+    "version": 0.1,
+    "date": "02-01-2020",
+    "developer": "CAPSUS",
+    "contact": "sistemas@capsus.mx",
+    "description": "Percentage of urban population living in informal settlements",
+    "category": "Goal 11. Make cities and human settlements inclusive, safe, resilient and sustainable",
+    "dependencies": ["GeneralCalculus"],
+    "data_dependencies": [{
+        "tables": [
+            "mmu",
+            "mmu_info",
+            "risk"
+        ],
+        "data": [
+            "slum polygons",
+            "mmu location"
+        ]
+    }],
+    "data_generated": [{
+        "table": "results",
+        "field": "pop_informalset",
+        "goal": "Goal 11. Make cities and human settlements inclusive, safe, resilient and sustainable"
+    }, {
+        "table": "results",
+        "field": "perc_informalset",
+        "goal": "Goal 11. Make cities and human settlements inclusive, safe, resilient and sustainable"
+    }],
+    "submodules": []
+}

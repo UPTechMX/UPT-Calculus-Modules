@@ -1,0 +1,28 @@
+{
+    "module": "WaterConsumption",
+    "name": "Water Consumption",
+    "version": 0.1,
+    "date": "04-09-2019",
+    "developer": "CAPSUS",
+    "contact": "sistemas@capsus.mx",
+    "description": "Total average volume of non-renewable water consumed per capita in the households of the city in one year. This average excludes renewable water that is obtained through rainwater harvesting and which is consumed in the city.",
+    "category": "Goal 6. Ensure availability and sustainable management of water and sanitation for all ",
+    "dependencies": ["GeneralCalculus"],
+    "data_dependencies": [{
+        "tables": [
+            "assumptions"
+        ],
+        "data": [
+            "mmu.location",
+            "mmu_info.population",
+            "amenity.location",
+            "amenity.fclass"
+        ]
+    }],
+    "data_generated": [{
+        "table": "results",
+        "field": "tot_water",
+        "goal": "Goal 6. Ensure availability and sustainable management of water and sanitation for all "
+    }],
+    "submodules": []
+}

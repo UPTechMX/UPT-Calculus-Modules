@@ -1,0 +1,32 @@
+{
+    "module": "BuffersAmenities",
+    "name": "Buffer zone",
+    "version": 0.1,
+    "date": "04-09-2019",
+    "developer": "CAPSUS",
+    "contact": "sistemas@capsus.mx",
+    "description": "This module performs the calculation or updating of the following values: amenities.buffer,transit.buffer, roads.buffer,risk.buffer ",
+    "category": "",
+    "dependencies": [],
+    "data_dependencies": [{
+        "tables": [
+            "amenities",
+            "assumptions"
+        ],
+        "data": {
+            "amenities": [
+                "location",
+                "fclass"
+            ],
+            "assumptions": [
+                "amenity_fclass"
+            ]
+        }
+    }],
+    "data_generated": [{
+        "table": "amenities",
+        "field": "buffer",
+        "goal": null
+    }],
+    "submodules": []
+}

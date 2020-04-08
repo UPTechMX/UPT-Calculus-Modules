@@ -1,0 +1,32 @@
+{
+    "module": "WastewaterTreated",
+    "name": "Wastewater Treated",
+    "version": 0.1,
+    "date": "04-09-2019",
+    "developer": "CAPSUS",
+    "contact": "sistemas@capsus.mx",
+    "description": "Percentage of wastewater treated",
+    "category": "Goal 6. Ensure availability and sustainable management of water and sanitation for all",
+    "dependencies": ["GeneralCalculus", "WaterConsumption"],
+    "data_dependencies": [{
+        "tables": [
+            "assumptions"
+        ],
+        "data": [
+            "mmu.location",
+            "mmu_info.population",
+            "amenity.location",
+            "amenity.fclass"
+        ]
+    }],
+    "data_generated": [{
+        "table": "results",
+        "field": "wwt_pct",
+        "goal": "Goal 6. Ensure availability and sustainable management of water and sanitation for all"
+    }, {
+        "table": "results",
+        "field": "ww",
+        "goal": "Goal 6. Ensure availability and sustainable management of water and sanitation for all"
+    }],
+    "submodules": []
+}

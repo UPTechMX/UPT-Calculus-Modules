@@ -1,0 +1,29 @@
+{
+    "module": "MountainConsumption",
+    "name": "Mountain Land Consumption",
+    "version": 0.1,
+    "date": "04-09-2019",
+    "developer": "CAPSUS",
+    "contact": "sistemas@capsus.mx",
+    "description": "Amount of mountain value land that is predicted to become urban human settlements, between the base year and the horizon year. This includes all mountain ecosystems.",
+    "category": "Goal 15. Protect, restore and promote sustainable use of terrestrial ecosystems, sustainably manage forests, combat desertification, and halt and reverse land degradation and halt biodiversity loss",
+    "dependencies": ["GeneralCalculus"],
+    "data_dependencies": [{
+        "tables": [
+            "footprint",
+            "mmu",
+            "mmu_info"
+        ],
+        "data": [
+            "mountain polygons",
+            "mmu location",
+            "mmu_info area"
+        ]
+    }],
+    "data_generated": [{
+        "table": "results",
+        "field": "mountain_consumption",
+        "goal": "Goal 15. Protect, restore and promote sustainable use of terrestrial ecosystems, sustainably manage forests, combat desertification, and halt and reverse land degradation and halt biodiversity loss"
+    }],
+    "submodules": []
+}

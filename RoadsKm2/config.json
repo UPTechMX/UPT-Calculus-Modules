@@ -1,0 +1,37 @@
+{
+    "module": "RoadsKm2",
+    "name": "Roads Km2",
+    "version": 0.1,
+    "date": "04-09-2019",
+    "developer": "CAPSUS",
+    "contact": "sistemas@capsus.mx",
+    "description": "",
+    "category": "",
+    "dependencies": ["GeneralCalculus"],
+    "data_dependencies": [{
+        "tables": [
+            "assumptions",
+            "footprint"
+        ],
+        "data": [
+            "mmu.location",
+            "mmu_info.population",
+            "amenity.location",
+            "amenity.fclass"
+        ]
+    }],
+    "data_generated": [{
+        "table": "results",
+        "field": "prim_road_km2",
+        "goal": null
+    }, {
+        "table": "results",
+        "field": "sec_road_km2",
+        "goal": null
+    }, {
+        "table": "results",
+        "field": "ter_road_km2",
+        "goal": null
+    }],
+    "submodules": []
+}

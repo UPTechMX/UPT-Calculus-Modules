@@ -1,0 +1,24 @@
+{
+    "module": "PotableWater",
+    "name": "Population with Access to Potable Water",
+    "version": 0.1,
+    "date": "04-09-2019",
+    "developer": "CAPSUS",
+    "contact": "sistemas@capsus.mx",
+    "description": "Percentage of population who has access to potable water",
+    "category": "Goal 1. End poverty in all its forms everywhere",
+    "dependencies": ["GeneralCalculus", "PotableWaterNetwork", "PotableWaterWells"],
+    "data_dependencies": [{
+        "tables": [],
+        "data": [
+            "con_elec",
+            "mmu location"
+        ]
+    }],
+    "data_generated": [{
+        "table": "results",
+        "field": "water_acc",
+        "goal": "Goal 1. End poverty in all its forms everywhere"
+    }],
+    "submodules": ["PotableWaterNetwork", "PotableWaterWells"]
+}

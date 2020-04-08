@@ -1,0 +1,28 @@
+{
+    "module": "RenewableEnergy",
+    "name": "Renewable Energy",
+    "version": 0.1,
+    "date": "04-09-2019",
+    "developer": "CAPSUS",
+    "contact": "sistemas@capsus.mx",
+    "description": "The percentage of the total energy consumption in the city that is generated locally through renewable sources.",
+    "category": "Goal 7. Ensure access to affordable, reliable, sustainable and modern energy for all",
+    "dependencies": ["GeneralCalculus"],
+    "data_dependencies": [{
+        "tables": [
+            "assumptions"
+        ],
+        "data": [
+            "mmu.location",
+            "mmu_info.population",
+            "amenity.location",
+            "amenity.fclass"
+        ]
+    }],
+    "data_generated": [{
+        "table": "results",
+        "field": "ren_energy",
+        "goal": "Goal 7. Ensure access to affordable, reliable, sustainable and modern energy for all"
+    }],
+    "submodules": []
+}

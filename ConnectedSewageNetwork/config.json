@@ -1,0 +1,40 @@
+{
+    "module": "ConnectedSewageNetwork",
+    "name": "Population Connected to Sewage Network",
+    "version": 0.1,
+    "date": "04-09-2019",
+    "developer": "CAPSUS",
+    "contact": "sistemas@capsus.mx",
+    "description": "Percentage of population who has access to sewage network",
+    "category": "Goal 1. End poverty in all its forms everywhere",
+    "dependencies": [
+        "GeneralCalculus"
+    ],
+    "data_dependencies": [{
+        "tables": [
+            "mmu",
+            "mmu_info"
+        ],
+        "data": {
+            "results": [
+                "pop_total"
+            ],
+            "mmu_info": [
+                "con_sew"
+            ],
+            "mmu": [
+                "location"
+            ]
+        }
+    }],
+    "data_generated": [{
+        "table": "results",
+        "field": "con_sew",
+        "goal": "Goal 1. End poverty in all its forms everywhere"
+    }, {
+        "table": "results",
+        "field": "pop_con_sew",
+        "goal": "Goal 1. End poverty in all its forms everywhere"
+    }],
+    "submodules": []
+}

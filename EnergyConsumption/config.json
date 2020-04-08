@@ -1,0 +1,38 @@
+{
+    "module": "EnergyConsumption",
+    "name": "Total Energy Consumption",
+    "version": 0.1,
+    "date": "04-09-2019",
+    "developer": "CAPSUS",
+    "contact": "sistemas@capsus.mx",
+    "description": "Total average energy consumed per person during a year for public lighting, municipal water supply, solid waste management, electricity in dwellings, commuting by public transportation and private vehicles, and wastewater treatment. The solid waste management energy consumption involves collection, transportation to transfer stations and final disposal sites, transference, and final disposal in landfill (if applicable).",
+    "category": "Goal 7. Ensure access to affordable, reliable, sustainable and modern energy for all",
+    "dependencies": [
+        "GeneralCalculus",
+        "EnergyWater",
+        "EnergyLighting",
+        "EnergySwaste",
+        "EnergyBuildings",
+        "EnergyTransport",
+        "EnergyWasteWaterTreated"
+    ],
+    "data_dependencies": [{
+        "tables": [],
+        "data": {
+            "results": [
+                "energy_water",
+                "energy_lighting",
+                "energy_swaste",
+                "energy_buildings",
+                "energy_transport",
+                "energy_wwt"
+            ]
+        }
+    }],
+    "data_generated": [{
+        "table": "results",
+        "field": "energy_consumption",
+        "goal": "Goal 7. Ensure access to affordable, reliable, sustainable and modern energy for all"
+    }],
+    "submodules": []
+}

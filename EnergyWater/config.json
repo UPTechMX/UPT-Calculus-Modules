@@ -1,0 +1,40 @@
+{
+    "module": "EnergyWater",
+    "name": "Energy associated with water distribution and management",
+    "version": 0.1,
+    "date": "04-09-2019",
+    "developer": "CAPSUS",
+    "contact": "sistemas@capsus.mx",
+    "description": "Per capita annual amount of energy required to supply the volume of water demanded by the city’s residential sector. Energy lost due to water losses derived from leakages in the network is included in the calculation.",
+    "category": "Goal 7. Ensure access to affordable, reliable, sustainable and modern energy for all",
+    "dependencies": [
+        "GeneralCalculus",
+        "WaterConsumption",
+        "RoadsKm2"
+    ],
+    "data_dependencies": [{
+        "tables": [
+            "assumptions"
+        ],
+        "data": {
+            "assumptions": [
+                "water_factor",
+                "loss"
+            ],
+            "results": [
+                "prim_road_km2",
+                "sec_road_km2",
+                "ter_road_km2",
+                "footprint_km2",
+                "tot_water",
+                "pop_total"
+            ]
+        }
+    }],
+    "data_generated": [{
+        "table": "results",
+        "field": "energy_water",
+        "goal": null
+    }],
+    "submodules": []
+}
