@@ -23,7 +23,7 @@ class Module:
         try:
             self.__Indicator = Indicator(self.__user)
             
-            road_classes=self.__getClassess("road_season")
+            road_classes=self.__getClassess("allseason")
             
             road_classes_array="'{"+",".join(road_classes)+"}'"            
             
@@ -81,10 +81,10 @@ class Module:
         try:
             query="""select distinct classification.name 
                 from classification
-                where classification.category='footprint'
+                where classification.category='{category}'
                 and classification.fclass='{fclass}'
                 """.format(fclass=fclass)
-            results = classification.objects.filter(category='footprint',fclass=fclass).distinct().values_list('name',flat=True)
+            results = classification.objects.filter(category='roads',fclass=fclass).distinct().values_list('name',flat=True)
 
             LogEvents(
                 "classes",
