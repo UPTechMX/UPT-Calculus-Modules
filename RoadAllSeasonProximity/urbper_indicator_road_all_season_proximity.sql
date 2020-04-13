@@ -29,10 +29,11 @@ BEGIN
       FROM
         roads
         inner join roads_info USING(roads_id)
+        inner join classification on classification.name=roads_info.name
+        and classification.fclass= ANY (road_list)
+        and classification.category='roads'
       WHERE
         scenario_id = scenario_par
-        AND fclass = ANY (road_list)
-        and name = 'allseason'
         and value = 1
   )
   -- get amenities WITH fclass in amenities
