@@ -39,7 +39,7 @@ BEGIN
   WHERE
     scenario_id = scenario_par
     and category= 'waste'
-    AND assumptions.name = 'truc,1_quant';
+    AND assumptions.name = 'truck1_quant';
   
   SELECT
     coalesce(value,0) INTO truck1_cap
