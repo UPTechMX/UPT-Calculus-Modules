@@ -27,12 +27,9 @@ class Module:
             
             road_classes_array="'{"+",".join(road_classes)+"}'"            
             
-            risk_classes=self.__getClassess("risk")
-            risk_classes_array="'{"+",".join(risk_classes)+"}'"
             error = True
             count = 0
             while error and count < 3:
-                print("Entrando\n")
                 self.__Indicator = Indicator(self.__user)
                 db = self.__Indicator.get_up_calculator_connection()
                 try:
