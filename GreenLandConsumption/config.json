@@ -18,7 +18,6 @@
         ],
         "data": {
             "footprint": [
-                "location",
                 "green_land",
                 "footprint_base"
             ],

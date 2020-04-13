@@ -26,7 +26,8 @@
                 "population density radius",
                 "prioritize_tod",
                 "min_vhu_rate",
-                "min_vhu_rate"
+                "min_vhu_rate",
+                "vacant_hu"
             ],
             "mmu": ["location"],
             "mmu_info": ["population", "area", "hu", "vhu"],

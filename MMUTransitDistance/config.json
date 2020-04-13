@@ -12,14 +12,15 @@
         "tables": [
             "mmu",
             "mmu_info",
-            "transit"
+            "transit",
+            "transit_info"
         ],
-        "data": [
-            "mmu.location",
-            "mmu_info.population",
-            "amenity.location",
-            "amenity.fclass"
-        ]
+        "data": [{
+            "mmu": ["location"],
+            "mmu_info": ["popultion"],
+            "transit_info": ["fclass"],
+            "transit": ["location"]
+        }]
     }],
     "data_generated": [{
         "table": "mmu_info",

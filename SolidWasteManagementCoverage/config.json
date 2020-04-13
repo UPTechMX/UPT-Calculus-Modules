@@ -12,11 +12,9 @@
         "tables": [
             "assumptions"
         ],
-        "data": [
-            "greenland polygons",
-            "mmu location",
-            "mmu_info area"
-        ]
+        "data": [{
+            "assumptions": ["truck1_quant", "truck1_cap", "collections", "waste_per", "land_ef"]
+        }]
     }],
     "data_generated": [{
         "table": "results",

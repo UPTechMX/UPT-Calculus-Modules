@@ -17,11 +17,9 @@
         ],
         "data": {
             "risk": [
-                "risk",
-                "location"
+                "risk"
             ],
             "amenities": [
-                "location",
                 "health_infrastructure"
             ]
         }

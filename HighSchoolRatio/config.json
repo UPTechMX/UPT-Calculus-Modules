@@ -14,12 +14,10 @@
             "mmu",
             "mmu_info"
         ],
-        "data": [
-            "mmu.location",
-            "mmu_info.population",
-            "amenity.location",
-            "amenity.fclass"
-        ]
+        "data": [{
+            "assumptions": ["highpop_perc"],
+            "mmu_info": ["highpop"]
+        }]
     }],
     "data_generated": [{
         "table": "results",

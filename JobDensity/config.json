@@ -15,12 +15,12 @@
             "jobs_info",
             "mmu"
         ],
-        "data": [
-            "mmu.location",
-            "mmu_info.population",
-            "amenity.location",
-            "amenity.fclass"
-        ]
+        "data": [{
+            "assumptions": ["job_min_dens", "job"],
+            "jobs_info": ["job_density_avge"],
+            "jobs": ["location"],
+            "mmu": ["location"]
+        }]
     }],
     "data_generated": [{
         "table": "jobs_info",

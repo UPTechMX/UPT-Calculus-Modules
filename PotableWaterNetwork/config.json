@@ -13,10 +13,10 @@
             "mmu",
             "mmu_info"
         ],
-        "data": [
-            "con_elec",
-            "mmu location"
-        ]
+        "data": [{
+            "mmu": ["location"],
+            "mmu_info": ["water_net", "population"]
+        }]
     }],
     "data_generated": [{
         "table": "results",
