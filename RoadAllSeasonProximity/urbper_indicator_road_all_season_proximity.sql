@@ -30,8 +30,8 @@ BEGIN
         roads
         inner join roads_info USING(roads_id)
         inner join classification on classification.name=roads_info.name
-        and classification.fclass= ANY (road_list)
-        and classification.category='roads'
+        and classification.fclass= ANY (array['allseason'])
+        and classification.category='roads_info'
       WHERE
         scenario_id = scenario_par
         and value = 1
