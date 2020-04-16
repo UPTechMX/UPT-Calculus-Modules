@@ -29,7 +29,7 @@ class Module:
                 db = self.__Indicator.get_up_calculator_connection()
                 try:
                     query = """
-                        select urbper_indicator_elementary_school_ratio({scenario},'elemax_perc'::varchar(30))
+                        select urbper_indicator_elementary_school_ratio({scenario},'elemax_perc')
                             """.format(scenario=self.__scenario)
                     LogEvents(
                         "elementary school ratio",
