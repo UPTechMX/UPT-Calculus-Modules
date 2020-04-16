@@ -34,7 +34,7 @@ class Module:
                 db = self.__Indicator.get_up_calculator_connection()
                 try:
                     query = """
-                        select urbper_indicator_road_all_season_proximity({scenario},'allseason_prox'::varchar(10),'pop_prox_allseason'::varchar(10),{road_class})
+                        select urbper_indicator_road_all_season_proximity({scenario},'pop_prox_allseason','allseason_prox',{road_class})
                         """.format(
                             scenario=self.__scenario, 
                             road_class=road_classes_array
@@ -83,9 +83,8 @@ class Module:
                 from classification
                 where classification.category='{category}'
                 and classification.fclass='{fclass}'
-                """.format(fclass=fclass)
-            results = classification.objects.filter(category='roads',fclass=fclass).distinct().values_list('name',flat=True)
-
+                """.format(fclass=fclass,category='roads_info')
+            results = classification.objects.filter(category='roads_info',fclass=fclass).distinct().values_list('name',flat=True)
             LogEvents(
                 "classes",
                 "classes finished: " + query,
