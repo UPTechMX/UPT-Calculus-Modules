@@ -50,7 +50,7 @@ BEGIN
   end if;    
 
   INSERT INTO results (scenario_id, name, value)
-  VALUES (scenario_par, result_name, elemenentary_capacity/pop_elemen) ON CONFLICT (scenario_id, name)
+  VALUES (scenario_par, result_name, elemenentary_capacity/pop_elemen*100) ON CONFLICT (scenario_id, name)
   DO
     UPDATE
   SET
