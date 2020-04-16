@@ -42,10 +42,10 @@ BEGIN
       and classification.fclass ='highpop'
     where mmu.scenario_id=scenario_par;
   else
-    select results.value * highpop_perc  into  pop_high
+    select results.value * highpop_perc/100  into  pop_high
     from results
-    where results.scenario=scenario_par
-    and results.name='tot_pop';
+    where results.scenario_id=scenario_par
+    and results.name='pop_total';
   end if;    
 
   INSERT INTO results (scenario_id, name, value)
