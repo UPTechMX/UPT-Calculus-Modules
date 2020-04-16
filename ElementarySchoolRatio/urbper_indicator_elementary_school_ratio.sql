@@ -43,10 +43,10 @@ BEGIN
     where mmu.scenario_id=scenario_par;
     --and mmu_info.name='elepop';
   else
-    select results.value * elepop_perc  into  pop_elemen
+    select results.value * elepop_perc/100  into  pop_elemen
     from results
-    where results.scenario=scenario_par
-    and results.name='tot_pop';
+    where results.scenario_id=scenario_par
+    and results.name='pop_total';
   end if;    
 
   INSERT INTO results (scenario_id, name, value)
