@@ -21,7 +21,7 @@ class Module:
             delete from mmu_info where mmu_id in (
                 select mmu_id 
                 from mmu 
-                where not st_contains(
+                where scenario_id={scenario} and not st_contains(
                     (
                         select location 
                         from footprint 
@@ -31,10 +31,10 @@ class Module:
                             and classification.fclass in ('political_boundary','study_area')
                             and scenario_id={scenario} 
                     ),mmu.location
-                )
+                ) 
             );
             delete from mmu 
-            where not st_contains(
+            where scenario_id={scenario} and not st_contains(
                 (
                     select location 
                     from footprint 
