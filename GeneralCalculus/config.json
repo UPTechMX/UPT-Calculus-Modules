@@ -23,15 +23,11 @@
                 "population for each mmu",
                 "area of each mmu",
                 "area density radius",
-                "population density radius",
-                "prioritize_tod",
-                "min_vhu_rate",
-                "min_vhu_rate",
-                "vacant_hu"
+                "population density radius"
             ],
             "mmu": ["location"],
             "mmu_info": ["population", "area", "hu", "vhu"],
-            "footprint": ["footprint_base", "study_area", "footprint_horizon", "location"]
+            "footprint": ["footprint_base", "study_area", "location"]
         }
 
     }],
