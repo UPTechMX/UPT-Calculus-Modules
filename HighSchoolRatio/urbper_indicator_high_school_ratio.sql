@@ -15,6 +15,8 @@ DECLARE
   highpop_perc double precision;
   pop_high double precision;
   highschool_capacity double precision;
+
+  result double precision;
 BEGIN
   SELECT
     value INTO highpop_perc
@@ -40,16 +42,22 @@ BEGIN
     inner join classification on classification.name = mmu_info.name
       and classification.category='mmu'
       and classification.fclass ='highpop'
-    where mmu.scenario_id=scenario_par;
+    where mmu.scenario_id=scenario_par
+    and mmu_info.value=1;
   else
     select results.value * highpop_perc/100  into  pop_high
     from results
     where results.scenario_id=scenario_par
     and results.name='pop_total';
-  end if;    
+  end if;
 
+  if highschool_capacity/pop_high*100>100 then
+    result=100;
+  else 
+    result=highschool_capacity/pop_high*100;
+  end if;
   INSERT INTO results (scenario_id, name, value)
-  VALUES (scenario_par, result_name, highschool_capacity/pop_high*100) ON CONFLICT (scenario_id, name)
+  VALUES (scenario_par, result_name, result) ON CONFLICT (scenario_id, name)
   DO
     UPDATE
   SET
