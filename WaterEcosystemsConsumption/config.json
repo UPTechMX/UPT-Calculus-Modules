@@ -15,11 +15,12 @@
             "mmu",
             "mmu_info"
         ],
-        "data": [
-            "greenland polygons",
-            "mmu location",
-            "mmu_info area"
-        ]
+        "data": [{
+            "risk": ["water_eco"],
+            "footprint": ["footprint_base"],
+            "mmu": ["location"],
+            "mmu_info": ["area"]
+        }]
     }],
     "data_generated": [{
         "table": "results",

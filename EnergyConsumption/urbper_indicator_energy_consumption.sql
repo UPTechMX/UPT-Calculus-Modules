@@ -18,6 +18,7 @@ DECLARE
   energy_buildings double precision;
   energy_transport double precision;
   energy_wwt double precision;
+  tot_ener double precision;
 BEGIN
 
   SELECT
@@ -68,8 +69,10 @@ BEGIN
     scenario_id = scenario_par
     AND results.name = 'energy_wwt';
 
+  tot_ener=(coalesce(energy_water,0)+coalesce(energy_lighting,0)+coalesce(energy_swaste,0)+coalesce(energy_buildings,0)+coalesce(energy_transport,0)+coalesce(energy_wwt,0));
+
   INSERT INTO results (scenario_id, name, value)
-  VALUES (scenario_par, result_name, energy_water+energy_lighting+energy_swaste+energy_buildings+energy_transport+energy_wwt) ON CONFLICT (scenario_id, name)
+  VALUES (scenario_par, result_name, tot_ener) ON CONFLICT (scenario_id, name)
   DO
     UPDATE
   SET

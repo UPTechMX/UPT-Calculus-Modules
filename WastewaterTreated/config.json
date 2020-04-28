@@ -12,12 +12,9 @@
         "tables": [
             "assumptions"
         ],
-        "data": [
-            "mmu.location",
-            "mmu_info.population",
-            "amenity.location",
-            "amenity.fclass"
-        ]
+        "data": [{
+            "assumptions": ["ww_factor", "wwtreated", "rwh", "GBC_pen"]
+        }]
     }],
     "data_generated": [{
         "table": "results",

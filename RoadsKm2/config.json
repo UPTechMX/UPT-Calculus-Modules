@@ -10,15 +10,11 @@
     "dependencies": ["GeneralCalculus"],
     "data_dependencies": [{
         "tables": [
-            "assumptions",
-            "footprint"
+            "assumptions"
         ],
-        "data": [
-            "mmu.location",
-            "mmu_info.population",
-            "amenity.location",
-            "amenity.fclass"
-        ]
+        "data": [{
+            "assumptions": ["prim_road_km", "sec_road_km", "ter_road_km"]
+        }]
     }],
     "data_generated": [{
         "table": "results",

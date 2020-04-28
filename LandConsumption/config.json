@@ -14,14 +14,11 @@
             "mmu",
             "mmu_info"
         ],
-        "data": [
-            "minimal mapping unit",
-            "footprint polygons",
-            "population for each mmu",
-            "area of each mmu",
-            "area density radius",
-            "population density radius"
-        ]
+        "data": [{
+            "footprint": ["study_area"],
+            "mmu": ["location"],
+            "mmu_info": ["area"]
+        }]
     }],
     "data_generated": [{
         "table": "results",

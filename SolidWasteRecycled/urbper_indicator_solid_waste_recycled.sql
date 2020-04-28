@@ -57,7 +57,7 @@ BEGIN
      INTO trucks_collect;
   --save data into results
   INSERT INTO results (scenario_id, name, value)
-  VALUES (scenario_par, 'waste_recycled', trucks_collect/rec_cap) ON CONFLICT (scenario_id, name)
+  VALUES (scenario_par, 'waste_recycled', (rec_cap*100)/trucks_collect/*trucks_collect/rec_cap*/) ON CONFLICT (scenario_id, name)
   DO
     UPDATE
   SET

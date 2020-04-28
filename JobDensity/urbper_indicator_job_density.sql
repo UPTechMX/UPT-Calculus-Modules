@@ -7,7 +7,7 @@ declare
 	job_min_dens float;
 	radius float;
     status BOOLEAN=false;
-	job record;
+	square record;
 begin
     
 	
@@ -45,15 +45,15 @@ begin
 		where ST_DWithin(b1.location,b2.buffer,radius)
 	;
 
-	for job in (
+	for square in (
 		select t1.mmu_id,avg(t1.job_density_avge) as jobs 
 		from t1  
 		group by t1.mmu_id
 	)
 	loop
-		insert into jobs_info(jobs_id,name,value)
-		values(job.jobs_id,'job_density_avge',job.jobs)
-		on CONFLICT(jobs_id,name)  do update
+		insert into mmu_info(mmu_id,name,value)
+		values(square.mmu_id,'job_density_avge',square.jobs)
+		on CONFLICT(mmu_id,name)  do update
 		set value=EXCLUDED.value;
 	end loop;
 

@@ -12,10 +12,9 @@
         "tables": [
             "assumptions"
         ],
-        "data": [
-            "slum polygons",
-            "mmu location"
-        ]
+        "data": [{
+            "assumptions": ["rec_cap", "truck_coverage", "waste_per"]
+        }]
     }],
     "data_generated": [{
         "table": "results",

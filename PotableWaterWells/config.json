@@ -14,9 +14,11 @@
             "mmu",
             "mmu_info"
         ],
-        "data": [
-            "mmu location"
-        ]
+        "data": [{
+            "amenities": ["dwells"],
+            "mmu": ["location"],
+            "mmu_info": ["population"]
+        }]
     }],
     "data_generated": [{
         "table": "results",

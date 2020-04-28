@@ -14,11 +14,11 @@
             "mmu_info",
             "transit"
         ],
-        "data": [
-            "minimal mapping unit location",
-            "minimal mapping unit population",
-            "transit location"
-        ]
+        "data": [{
+            "mmu": ["location"],
+            "mmu_info": ["population"],
+            "transit": ["fclass"]
+        }]
     }],
     "data_generated": [{
         "table": "results",

@@ -23,21 +23,18 @@ class Module:
         try:
             self.__Indicator = Indicator(self.__user)
             
-            road_classes=self.__getClassess("road_season")
+            road_classes=self.__getClassess("allseason")
             
             road_classes_array="'{"+",".join(road_classes)+"}'"            
             
-            risk_classes=self.__getClassess("risk")
-            risk_classes_array="'{"+",".join(risk_classes)+"}'"
             error = True
             count = 0
             while error and count < 3:
-                print("Entrando\n")
                 self.__Indicator = Indicator(self.__user)
                 db = self.__Indicator.get_up_calculator_connection()
                 try:
                     query = """
-                        select urbper_indicator_road_all_season_proximity({scenario},'allseason_prox'::varchar(10),'pop_prox_allseason'::varchar(10),{road_class})
+                        select urbper_indicator_road_all_season_proximity({scenario},'pop_prox_allseason','allseason_prox',{road_class})
                         """.format(
                             scenario=self.__scenario, 
                             road_class=road_classes_array
@@ -84,11 +81,10 @@ class Module:
         try:
             query="""select distinct classification.name 
                 from classification
-                where classification.category='footprint'
+                where classification.category='{category}'
                 and classification.fclass='{fclass}'
-                """.format(fclass=fclass)
-            results = classification.objects.filter(category='footprint',fclass=fclass).distinct().values_list('name',flat=True)
-
+                """.format(fclass=fclass,category='roads_info')
+            results = classification.objects.filter(category='roads_info',fclass=fclass).distinct().values_list('name',flat=True)
             LogEvents(
                 "classes",
                 "classes finished: " + query,

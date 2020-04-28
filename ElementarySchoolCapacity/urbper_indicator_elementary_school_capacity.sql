@@ -28,14 +28,14 @@ BEGIN
   create temp table gross_area_t as
   select name
   from classification
-  where classification.category='amenities'
+  where classification.category='amenities_info'
   and fclass='gross_area';
 
   drop table if exists shift_t;
   create temp table shift_t as
   select name
   from classification
-  where classification.category='amenities'
+  where classification.category='amenities_info'
   and fclass='shift';
   -- get risk polygons with fclass in risks
   SELECT

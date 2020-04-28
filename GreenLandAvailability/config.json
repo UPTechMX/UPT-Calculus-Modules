@@ -16,7 +16,6 @@
         ],
         "data": {
             "footprint": [
-                "location",
                 "green_land",
                 "protected"
             ]

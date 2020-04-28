@@ -14,10 +14,11 @@
             "mmu_info",
             "risk"
         ],
-        "data": [
-            "slum polygons",
-            "mmu location"
-        ]
+        "data": [{
+            "risk": ["not_safe"],
+            "mmu": ["location"],
+            "mmu_info": ["population"]
+        }]
     }],
     "data_generated": [{
         "table": "results",

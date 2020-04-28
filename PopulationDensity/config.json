@@ -10,12 +10,7 @@
     "dependencies": ["GeneralCalculus"],
     "data_dependencies": [{
         "tables": [],
-        "data": [
-            "mmu.location",
-            "mmu_info.population",
-            "amenity.location",
-            "amenity.fclass"
-        ]
+        "data": []
     }],
     "data_generated": [{
         "table": "results",

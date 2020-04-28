@@ -13,11 +13,10 @@
             "risk",
             "roads"
         ],
-        "data": [
-            "risk polygons",
-            "amenity location",
-            "amenity fclass"
-        ]
+        "data": [{
+            "risk": ["risk"],
+            "roads": ["road_infrastructure"]
+        }]
     }],
     "data_generated": [{
         "table": "results",

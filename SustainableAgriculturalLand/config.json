@@ -12,10 +12,9 @@
         "tables": [
             "footprint"
         ],
-        "data": [
-            "agricutural polygons",
-            "sustainable agricutural polygons"
-        ]
+        "data": [{
+            "footprint": ["agricultural_sus", "agricultural"]
+        }]
     }],
     "data_generated": [{
         "table": "results",

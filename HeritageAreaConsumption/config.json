@@ -14,11 +14,11 @@
             "mmu",
             "mmu_info"
         ],
-        "data": [
-            "greenland polygons",
-            "mmu location",
-            "mmu_info area"
-        ]
+        "data": [{
+            "footprint": ["footprint_base", "heritage"],
+            "mmu": ["location"],
+            "mmu_info": ["area"]
+        }]
     }],
     "data_generated": [{
         "table": "results",

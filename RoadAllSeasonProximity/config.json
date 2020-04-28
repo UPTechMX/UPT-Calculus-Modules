@@ -11,14 +11,16 @@
     "data_dependencies": [{
         "tables": [
             "roads",
+            "roads_info",
             "mmu",
             "mmu_info"
         ],
-        "data": [
-            "risk polygons",
-            "amenity location",
-            "amenity fclass"
-        ]
+        "data": [{
+            "roads": ["location"],
+            "roads_info": ["allseason"],
+            "mmu": ["location"],
+            "mmu_info": ["population"]
+        }]
     }],
     "data_generated": [{
         "table": "results",

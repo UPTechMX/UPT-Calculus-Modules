@@ -14,12 +14,10 @@
             "amenities",
             "amenities_info"
         ],
-        "data": [
-            "mmu.location",
-            "mmu_info.population",
-            "amenity.location",
-            "amenity.fclass"
-        ]
+        "data": [{
+            "assumptions": ["highstudent_area"],
+            "amenity_info": ["gross_area", "shift"]
+        }]
     }],
     "data_generated": [{
         "table": "results",

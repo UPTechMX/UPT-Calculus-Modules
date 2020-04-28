@@ -29,7 +29,7 @@ class Module:
                 db = self.__Indicator.get_up_calculator_connection()
                 try:
                     amenity_classes = []
-                    amenity_classes.append("high_school_capacity")
+                    amenity_classes.append("high_school")
                     amenity_classes_array="'{"+",".join(amenity_classes)+"}'"
                     query = """
                         select urbper_indicator_high_school_capacity({scenario},'highschool_capacity'::varchar(30),{fclass_array})

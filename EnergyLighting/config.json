@@ -25,7 +25,10 @@
                 "volt_led",
                 "volt_bulb",
                 "led_pen",
-                "hours_day"
+                "hours_day",
+                "prim_road_km",
+                "sec_road_km",
+                "ter_road_km"
             ],
             "results": [
                 "footprint_km2",

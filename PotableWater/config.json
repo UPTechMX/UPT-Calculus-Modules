@@ -10,10 +10,7 @@
     "dependencies": ["GeneralCalculus", "PotableWaterNetwork", "PotableWaterWells"],
     "data_dependencies": [{
         "tables": [],
-        "data": [
-            "con_elec",
-            "mmu location"
-        ]
+        "data": []
     }],
     "data_generated": [{
         "table": "results",

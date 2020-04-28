@@ -15,6 +15,8 @@ DECLARE
   elepop_perc double precision;
   pop_elemen double precision;
   elemenentary_capacity double precision;
+
+  result double precision;
 BEGIN
   SELECT
     value INTO elepop_perc
@@ -40,17 +42,23 @@ BEGIN
     inner join classification on classification.name = mmu_info.name
       and classification.category='mmu'
       and classification.fclass ='elepop'
-    where mmu.scenario_id=scenario_par;
-    --and mmu_info.name='elepop';
+    where mmu.scenario_id=scenario_par
+    and mmu_info.value=1;
   else
-    select results.value * elepop_perc  into  pop_elemen
+    select results.value * elepop_perc/100  into  pop_elemen
     from results
-    where results.scenario=scenario_par
-    and results.name='tot_pop';
+    where results.scenario_id=scenario_par
+    and results.name='pop_total';
   end if;    
 
+  if elemenentary_capacity/pop_elemen*100 > 100 then
+    result=100;
+  else 
+    result=elemenentary_capacity/pop_elemen*100;
+  end if;
+
   INSERT INTO results (scenario_id, name, value)
-  VALUES (scenario_par, result_name, elemenentary_capacity/pop_elemen) ON CONFLICT (scenario_id, name)
+  VALUES (scenario_par, result_name, result) ON CONFLICT (scenario_id, name)
   DO
     UPDATE
   SET

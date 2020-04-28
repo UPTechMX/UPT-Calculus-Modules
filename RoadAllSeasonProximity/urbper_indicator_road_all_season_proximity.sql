@@ -22,15 +22,19 @@ BEGIN
   WHERE
     scenario_id = scenario_par
     AND results.name = 'pop_total';
-  -- get risk polygons with fclass in risks
+  
   WITH roads_buffer_polygon AS (
       SELECT
         st_union (buffer) AS geom
       FROM
         roads
+        inner join roads_info USING(roads_id)
+        inner join classification on classification.name=roads_info.name
+        and classification.fclass= ANY (array['allseason'])
+        and classification.category='roads_info'
       WHERE
         scenario_id = scenario_par
-        AND fclass = ANY (road_list)
+        and value = 1
   )
   -- get amenities WITH fclass in amenities
   -- high school

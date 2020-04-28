@@ -13,11 +13,10 @@
             "risk",
             "amenities"
         ],
-        "data": [
-            "risk polygons",
-            "amenity location",
-            "amenity fclass"
-        ]
+        "data": [{
+            "risk": ["risk"],
+            "amenities": ["telecom_infrastructure"]
+        }]
     }],
     "data_generated": [{
         "table": "results",

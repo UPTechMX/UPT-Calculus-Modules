@@ -28,13 +28,15 @@ BEGIN
         scenario_id = scenario_par
         AND results.name = 'pop_total';
     
-    SELECT
-        value INTO ww_par
-    FROM
-        results
-    WHERE
-        scenario_id = scenario_par
-        AND results.name = 'ww';
+    select COALESCE(
+        (SELECT
+            value 
+        FROM
+            results
+        WHERE
+            scenario_id = scenario_par
+            AND results.name = 'ww'), 0
+    ) INTO ww_par ;
     
 
     IF ww_par > wwtreated_par THEN
