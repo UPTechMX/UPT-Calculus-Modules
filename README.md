@@ -30,7 +30,7 @@ Read the Installation section.
 To install a calculus module:
 
 1. Donwload the zip file available inside the directory of each Calculus Module,
-1. Use the module installer available in the UrbanPerformance tool enabled in your geoportal.
+1. Use the module installer available in the UrbanPerformance tool to enabled it in the geoportal.
 
 #### Note
 
